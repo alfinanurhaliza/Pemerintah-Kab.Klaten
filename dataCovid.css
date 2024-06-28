@@ -1,0 +1,401 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #bc1c02;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+.header-content img {
+    width: 67px;
+    height: auto;
+    margin-right: 30px;
+}
+
+header h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a:nth-child(n+9){
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #bc1c02;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #bc1c02;
+    text-decoration: none;
+    color: #ffff;
+}
+
+/* Adding border to each menu item except the last one */
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    height: 50%;
+    border-right: 1px solid #bc1c02;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none; /* Dropdown sembunyi secara default */
+    position: absolute; /* Posisi absolut agar dropdown muncul tepat di bawah menu induk */
+    background-color: white; /* Warna latar belakang dropdown */
+    border-radius: 5px; /* Sudut dropdown */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Tampilkan dropdown saat menu utama dihover */
+}
+
+.dropdown-menu a {
+    color: #bc1c02; /* Warna teks dropdown */
+    display: block;
+    padding: 10px 15px; /* Padding pada setiap elemen dropdown */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan dropdown */
+    text-align: left; /* Rata kanan teks dropdown */
+}
+
+.dropdown-menu a:hover {
+    background-color: #bc1c02; /* Warna latar belakang saat tautan dropdown dihover */
+    color: white;
+}
+
+.dropdown-item{
+    color: #bc1c02;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 45px;
+    margin-bottom: 90px;
+}
+
+.berita img {
+    width: 100%;
+}
+
+.banner-wrapper {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto; /* Sesuaikan dengan tinggi gambar banner */
+}
+
+.banner-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 377px;
+    height: 251px;
+    object-fit: cover; /* Untuk menjaga proporsi gambar */
+}
+
+.dataCovid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 20px; /* space between the cards */
+    margin-top: 20px;
+}
+
+.dataCovid-item {
+    justify-content: center; /* Pusatkan kolom secara horizontal */
+    align-content: center; /* Pusatkan konten secara vertikal */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar saat dihover */
+    border-radius: 3%;
+    padding: 30px;
+}
+
+.dataCovid-item .selengkapnya-btn {
+    color: #bc1c02; /* Warna teks */
+    font-weight: bolder;
+    background-color: transparent; /* Hapus warna latar belakang */
+    padding: 10px;
+    border-radius: 5%; /* Sudut membulat */
+    border: 1px solid #bc1c02;
+    text-decoration: none;
+    float: right; /* Posisikan tombol di kanan */
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.dataCovid h3 {
+    margin-left: 10px;
+    font-size: 20px;
+    color: #bc1c02;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.dataCovid img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.dataCovid h2 {
+    color: #bc1c02;
+    font-weight: bold;
+    margin-bottom: 45px;
+}
+
+.dataCovid p {
+    color: #bc1c02;
+}
+
+.card-date img {
+    width: 16px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the icon with the text */
+    margin-right: 5px; /* Optional: space between the icon and the text */
+}
+
+
+.read-more-btn {
+    display: inline-block;
+    background-color: #bc1c02;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #bc1c02;
+}
+
+
+.berita-item a {
+    color: #BC1C02;
+    text-decoration: none;
+}
+
+.sidebar {
+    width: 25%;
+}
+
+.sidebar section {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar section h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: #a31515;
+    text-decoration: none;
+}
+
+.pagination {
+    margin-top: 10px; /* Jarak antara konten dan pagination */
+    text-align: left; 
+}
+
+.page-item .page-link {
+    color: #bc1c02;
+}
+
+.page-item.active .page-link {
+    background-color: #bc1c02;
+    border-color: #bc1c02;
+}
+
+.page-link:hover {
+    background-color: #bc1c02;
+    border-color: #bc1c02;
+    color: white;
+}
+
+footer {
+    background-color: #bc1c02;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    max-width: 40%;
+}
+
+.footer-left .logo {
+    width: 125px;
+    height: 158px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-center h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-center .ikon {
+    width: auto;
+    height: 26px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.footer-center .item{
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    max-width: 33%;
+    margin-right: 40px;
+}
+
+.footer-right p {
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.footer-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-right textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 115px;
+}
+
+.footer-right button {
+    width: 179px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #bc1c02;
+    color: #ffffff;
+    border-color: #ffffff;
+    border-style: solid;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.footer-right button:hover {
+    background-color: hsl(0, 96%, 29%);
+}
+/* Existing styles remain unchanged */
+
+.card-date img.icon-date {
+    width: 16px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the icon with the text */
+    margin-right: 5px; /* Optional: space between the icon and the text */
+}
+
+.dataCovid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-gap: 20px; /* space between the cards */
+    margin-top: 20px;
+}
+
+.card-body h3{
+    font-size: 20px;
+    text-align: left;
+
+    
+}
+
+.selengkapnya-btn {
+    background-color: #bc1c02;
+    border-color: #bc1c02;
+    color: white;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.selengkapnya-btn:hover {
+    background-color: #bc1c02;
+    border-color: #bc1c02;
+    color: #ffffff;
+}

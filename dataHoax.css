@@ -1,0 +1,237 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #bc1c02;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+.header-content img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1{
+    font-size: 24px;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none; /* Dropdown sembunyi secara default */
+    position: absolute; /* Posisi absolut agar dropdown muncul tepat di bawah menu induk */
+    background-color: white; /* Warna latar belakang dropdown */
+    border-radius: 5px; /* Sudut dropdown */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Tampilkan dropdown saat menu utama dihover */
+}
+
+.dropdown-menu a {
+    color: #bc1c02; /* Warna teks dropdown */
+    display: block;
+    padding: 10px 15px; /* Padding pada setiap elemen dropdown */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan dropdown */
+}
+
+.dropdown-menu a:hover {
+    background-color: #e73718; /* Warna latar belakang saat tautan dropdown dihover */
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a:nth-child(n+9){
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #bc1c02;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e73718;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.berita img {
+    width: 100%;
+}
+
+.banner-wrapper {
+    margin-bottom: 20px;
+    width: 100%;
+    height: auto; /* Sesuaikan dengan tinggi gambar banner */
+}
+
+.banner-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 377px;
+    height: 251px;
+    object-fit: cover; /* Untuk menjaga proporsi gambar */
+}
+
+.dataHoax {
+    width: 70%;
+}
+
+.dataHoax h2 {
+    color: #bc1c02;
+    padding: 10px;
+}
+
+.dataHoax-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.dataHoax-item {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
+}
+
+.dataHoax img {
+    width: 100%;
+    height: auto;
+}
+
+.dataHoax h3 {
+    margin: 10px 0;
+}
+
+.dataHoax p {
+    margin: 10px 0;
+}
+
+.berita-item a {
+    color: #BC1C02;
+    text-decoration: none;
+}
+
+.sidebar {
+    width: 25%;
+}
+
+.sidebar section {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar section h3 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: #a31515;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #bc1c02;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+address p {
+    margin: 5px 0;
+}
+
+.feedback {
+    max-width: 400px;
+    width: 100%;
+}
+
+.feedback p {
+    margin-bottom: 10px;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback input, .feedback textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.feedback button {
+    background-color: white;
+    color: #bc1c02;
+    border: 2px solid #bc1c02;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback button:hover {
+    background-color: #a31515;
+    color: white;
+}

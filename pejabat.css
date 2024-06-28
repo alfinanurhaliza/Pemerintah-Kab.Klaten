@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #d2232a;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header img {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+header h1 {
+    display: inline;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+nav {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+#pejabat-struktural {
+    text-align: center;
+}
+
+#pejabat-struktural h2 {
+    color: #d2232a;
+}
+
+.photo {
+    display: flex;
+    justify-content: center; /* Menengahkan gambar secara horizontal */
+    margin-bottom: 20px;
+}
+
+.accordion {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-button:hover {
+    background-color: #e0e0e0;
+}
+
+footer {
+    background-color: #d2232a;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.contact-info,
+.feedback-form {
+    width: 45%;
+}
+
+.contact-info img {
+    width: 50px;
+}
+
+.contact-info h3,
+.feedback-form h3 {
+    margin-top: 0;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.feedback-form button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #555;
+}

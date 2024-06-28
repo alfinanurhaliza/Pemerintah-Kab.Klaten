@@ -1,0 +1,200 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #BC1C02;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+.header-content img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative; /* To use positioning for the border */
+}
+
+nav ul li a:nth-child(n+9) {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #bc1c02;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e73718;
+}
+
+/* Adding border to each menu item except the last one */
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    height: 50%;
+    border-right: 1px solid #bc1c02;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none; /* Dropdown sembunyi secara default */
+    position: absolute; /* Posisi absolut agar dropdown muncul tepat di bawah menu induk */
+    background-color: white; /* Warna latar belakang dropdown */
+    border-radius: 5px; /* Sudut dropdown */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Tampilkan dropdown saat menu utama dihover */
+}
+
+.dropdown-menu a {
+    color: #bc1c02; /* Warna teks dropdown */
+    display: block;
+    padding: 10px 15px; /* Padding pada setiap elemen dropdown */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan dropdown */
+    text-align: left; /* Rata kanan teks dropdown */
+}
+
+.dropdown-menu a:hover {
+    background-color: #e73718; /* Warna latar belakang saat tautan dropdown dihover */
+    color: white;
+}
+
+main {
+    padding: 20px 0;
+}
+
+.container {
+    margin: 20px 50px;
+    padding: 20px;
+}
+
+h2 {
+    color: #BC1C02;
+}
+
+.date {
+    color: #BC1C02;
+    font-size: 14px;
+}
+
+.photo {
+    display: flex;
+    justify-content: center; /* Menengahkan gambar */
+    margin-bottom: 20px;
+}
+
+.photo img {
+    max-width: 100%;
+    height: auto;
+    width: 900px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #bc1c02;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-content img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+address p {
+    margin: 5px 0;
+}
+
+address p img {
+    width: 50%;
+}
+
+.feedback {
+    max-width: 400px;
+    width: 100%;
+}
+
+.feedback p {
+    margin-bottom: 10px;
+}
+
+.feedback form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback input, .feedback textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.feedback button {
+    background-color: white;
+    color: #bc1c02;
+    border: 2px solid #bc1c02;
+    padding: 5px 10px; /* Smaller button padding */
+    border-radius: 5px;
+    cursor: pointer;
+    width: auto; /* Make the width fit the content */
+    margin-left: auto; /* Align to the right */
+}
+
+.feedback button:hover {
+    background-color: #bc1c02;
+    color: white;
+}

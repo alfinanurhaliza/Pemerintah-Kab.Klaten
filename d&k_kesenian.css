@@ -1,0 +1,393 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #bc1c02;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+}
+
+.header-content img {
+    width: 67px;
+    height: auto;
+    margin-right: 30px;
+}
+
+header h1{
+    font-size: 32px;
+    font-weight: bold;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+    position: relative;
+}
+
+nav ul li a:nth-child(n+9){
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav ul li a {
+    color: #bc1c02;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #e73718;
+    text-decoration: none;
+    color: #ffff;
+}
+
+/* Adding border to each menu item except the last one */
+nav ul li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-50%);
+    height: 50%;
+    border-right: 1px solid #bc1c02;
+}
+
+/* Dropdown */
+.dropdown-menu {
+    display: none; /* Dropdown sembunyi secara default */
+    position: absolute; /* Posisi absolut agar dropdown muncul tepat di bawah menu induk */
+    background-color: white; /* Warna latar belakang dropdown */
+    border-radius: 5px; /* Sudut dropdown */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Tampilkan dropdown saat menu utama dihover */
+}
+
+.dropdown-menu a {
+    color: #bc1c02; /* Warna teks dropdown */
+    display: block;
+    padding: 10px 15px; /* Padding pada setiap elemen dropdown */
+    text-decoration: none; /* Menghilangkan garis bawah pada tautan dropdown */
+    text-align: left; /* Rata kanan teks dropdown */
+}
+
+.dropdown-menu a:hover {
+    background-color: #e73718; /* Warna latar belakang saat tautan dropdown dihover */
+    color: white;
+}
+
+.dropdown-item{
+    color: #bc1c02;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 90px;
+}
+
+.berita {
+    position: relative;
+    text-align: center;
+}
+
+.berita img {
+    width: 100%;
+    height: auto;
+}
+
+.berita input {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 50%;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.berita-terkini {
+    margin-top: 45px;
+    width: 70%;
+}
+
+.berita-terkini h2 {
+    color: #bc1c02;
+    padding: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.berita-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.berita-item {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5%;
+    box-shadow: 0 0 40px rgba(0,0,0,0.1);
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.berita-item img {
+    width: 100%;
+    height: auto;
+}
+
+.berita-item h3 {
+    margin: 10px;
+    color: #bc1c02;
+    font-weight: bolder;
+    font-size: 20px;
+
+}
+
+.berita-item p {
+    font-size: 16px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.berita-item .selengkapnya-btn {
+    color: #bc1c02;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 5%;
+    border: 1px solid #bc1c02;
+    text-decoration: none;
+    float: right; /* Added to position the button to the right */
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.selengkapnya-btn:hover {
+    background-color: #e73718;
+    border-color: #e73718;
+    color: #ffffff;
+}
+
+.berita-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sidebar {
+    width: 25%;
+    margin-top: 80px;
+}
+
+.sidebar section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar section h3 {
+    margin-top: 0;
+    background-color: #bc1c02;
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.card {
+    display: flex;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 10px;
+    margin-bottom: 15px; /* Move margin-bottom from here to .sidebar section */
+}
+
+.card img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #bc1c02;
+}
+
+.card-text p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #bc1c02;
+}
+
+.container-p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-grid{
+    margin: 0;
+    font-size: 14px;
+    color: #bc1c02;
+}
+
+footer {
+    background-color: #b22222;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-left {
+    max-width: 40%;
+}
+
+.footer-left .logo {
+    width: 125px;
+    height: 158px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-center h1{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-center .ikon {
+    width: auto;
+    height: 26px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.footer-center .item{
+    align-items: center;
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    max-width: 33%;
+    margin-right: 40px;
+}
+
+.footer-right p {
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.footer-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.footer-right textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    height: 115px;
+}
+
+.footer-right button {
+    width: 179px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b22222;
+    color: #ffffff;
+    border-color: #ffffff;
+    border-style: solid;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.footer-right button:hover {
+    background-color: hsl(0, 96%, 29%);
+}
